@@ -16,6 +16,19 @@ class CommentsController < ApplicationController
       render "new"
     end
   end
+  
+  def edit
+end
+  def update
+    if @comment.update(comment_params)
+      flash[:notice] = "Comment has been updated."
+      redirect_to post_path(@post)
+    else
+      flash[:error] = "Comment has not been updated."
+      redirect_to edit_post_path(@post)
+    end
+  end
+  
     
   private
   def set_post

@@ -19,5 +19,6 @@
     <%= f.label :author %>
     <%= f.text_field :author, class: "form-control" %>
 </div>
-<%= f.submit "Add Comment", class: "btn btn-default" %>
-<% end %>
+<%= f.submit "#{@comment.new_record? ? 'Add Comment' : 'Update Comment'}", class: "btn btn-primary" %>
+  <% end %>
+</div>

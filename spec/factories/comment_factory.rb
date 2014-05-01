@@ -1,6 +1,7 @@
 FactoryGirl.define do
-  factory :comment do
-    author 'Bugs Bunny'
-    content 'Thats all folks!'
+  factory :user do
+    username 'steve'
+    password 'hunter2'
+    password_confirmation 'hunter2'
    end
 end
